@@ -20,6 +20,8 @@ atencionCtrl.registrar_atencion_cliente = async (req, res) =>{
     //Verifica si este cliente ya presenta un historial de pedidos
 
     var atenciones = await Atencion.findOne(query);
+    // console.log("atenciones");
+    // console.log(atenciones);
 
     if(atenciones){
         res.json({
@@ -54,6 +56,7 @@ atencionCtrl.registrar_atencion_cliente = async (req, res) =>{
 
         
 
+        //Comprobamos si el cliente existe para mandarselo al front 
 
         var query2 = {};
         var dni2 = "dni";
@@ -121,6 +124,8 @@ atencionCtrl.registrar_reclamo_cliente = async (req, res) =>{
     //Verifica si este cliente ya presenta un historial de pedidos
 
     var atenciones = await Atencion.findOne(query);
+    // console.log("atenciones");
+    // console.log(atenciones);
 
     if(atenciones){
         res.json({
